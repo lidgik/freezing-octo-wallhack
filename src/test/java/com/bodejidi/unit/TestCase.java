@@ -16,7 +16,6 @@ public class TestCase {
             String testPackage = args[0];
 
             Reflections reflections = new Reflections(testPackage);
-
             Set<Class<? extends TestCase>> allTestCases =
                 reflections.getSubTypesOf(TestCase.class);
 

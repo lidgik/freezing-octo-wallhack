@@ -8,6 +8,6 @@ public class ContactRepository {
     }
 
     public void deleteById(Long id) {
-        db.executeUpdate("");
+        db.executeUpdate("DELETE FROM contact WHERE id=" + id);
     }
 }
