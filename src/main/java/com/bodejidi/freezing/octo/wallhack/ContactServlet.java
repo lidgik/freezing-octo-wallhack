@@ -13,7 +13,7 @@ public class ContactServlet extends HttpServlet {
         ContactService contactService = new ContactService(contactDaoImpl);
         Contact contact = new Contact();
 
-        contact.setName(req.getParameter("name"));
+        contact.setName(req.getParameter("name").trim());
 
         contactService.save(contact);
         resp.getWriter().println("Contact: " + contact);

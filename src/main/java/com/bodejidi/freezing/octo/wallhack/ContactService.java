@@ -8,9 +8,10 @@ public class ContactService {
     }
 
     public Contact save(Contact contact) {
-        if(contact.getName() != null && contact.getName().length() > 0) {
+        if(contact.getName() != null && contact.getName().trim().length() > 0) {
             return contactDao.save(contact);
         }
         return contact;
     }
+
 }
