@@ -17,10 +17,11 @@ public class ContactRepositoryTest extends TestCase {
         ContactRepository contactRepository = new ContactRepository(db);
         Contact contact = new Contact();
         contact.setId(1L);
-        contact.setName("Shi Hang");
+        contact.setName("Shi Hang Hang");
         
         contactRepository.updateContact(contact);
-        assertEquals("UPDATE contact SET name='Shi Hang Hang' WHERE id=1", db.executeUpdateParam);
+        assertArrayEquals(new Object[]{1L,"Shi Hang Hang"}, contactRepository.updateContact(contact));
+//        assertEquals("UPDATE contact SET name='Shi Hang Hang' WHERE id=1", db.executeUpdateParam);
     }
 }
 
