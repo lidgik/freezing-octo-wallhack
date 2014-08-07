@@ -11,10 +11,8 @@ public class ContactRepository {
         db.executeUpdate("DELETE FROM contact WHERE id=" + id);
     }
 
-    public Object[] updateContact(Contact contact) {
-        Long id = contact.getId();
-        String name = contact.getName();
-//        db.executeUpdate("UPDATE contact SET name='" + "s " + "' WHERE id=" + id);
-        return new Object[]{id, name};
+    public void updateContact(Contact contact) {
+        String sql = "UPDATE contact SET name=? WHERE id=?";
+        db.executeUpdate(sql, contact.getName(), contact.getId());
     }
 }

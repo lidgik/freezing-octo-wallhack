@@ -20,8 +20,8 @@ public class ContactRepositoryTest extends TestCase {
         contact.setName("Shi Hang Hang");
         
         contactRepository.updateContact(contact);
-        assertArrayEquals(new Object[]{1L,"Shi Hang Hang"}, contactRepository.updateContact(contact));
-//        assertEquals("UPDATE contact SET name='Shi Hang Hang' WHERE id=1", db.executeUpdateParam);
+        assertArrayEquals(new Object[]{"Shi Hang Hang", 1L}, db.executeUpdateParam2);
+        assertEquals("UPDATE contact SET name=? WHERE id=?", db.executeUpdateParam);
     }
 }
 
