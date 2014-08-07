@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "Deploying.."
+
+mkdir -p $CATALINA_HOME/webapps/laughing-wallhack
+
+cp -r src/main/webapp/* $CATALINA_HOME/webapps/laughing-wallhack/
+cp -r target/classes $CATALINA_HOME/webapps/laughing-wallhack/WEB-INF/
+
+echo "Deploy done."
