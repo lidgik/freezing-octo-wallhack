@@ -15,4 +15,16 @@ public class ContactServiceTest extends TestCase {
 
         assertFalse(contactDao.saveHasInvoked);
     }
+    
+    public void test_username_is_blank_should_not_save() {
+        MockContactDao contactDao = new MockContactDao();
+        ContactService contactService = new ContactService(contactDao);
+        Contact contact = new Contact();
+
+        contact.setName("    ");
+        contactService.save(contact);
+
+        assertFalse(contactDao.saveHasInvoked);
+    }
+
 }
