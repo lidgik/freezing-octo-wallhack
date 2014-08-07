@@ -17,8 +17,8 @@ public class TestCase {
 
             Reflections reflections = new Reflections(testPackage);
 
-            Set<Class<? extends MiniatureSpiceTestCase>> allTestCases =
-                reflections.getSubTypesOf(MiniatureSpiceTestCase.class);
+            Set<Class<? extends TestCase>> allTestCases =
+                reflections.getSubTypesOf(TestCase.class);
 
             for(Class clazz: allTestCases) {
                 System.out.println("Testing: " + clazz.getName());

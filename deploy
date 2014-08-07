@@ -2,9 +2,9 @@
 
 echo "Deploying.."
 
-mkdir -p $CATALINA_HOME/webapps/laughing-wallhack
+mkdir -p $CATALINA_HOME/webapps/freezing-octo-wallhack
 
-cp -r src/main/webapp/* $CATALINA_HOME/webapps/laughing-wallhack/
-cp -r target/classes $CATALINA_HOME/webapps/laughing-wallhack/WEB-INF/
+cp -r src/main/webapp/* $CATALINA_HOME/webapps/freezing-octo-wallhack/
+cp -r target/classes $CATALINA_HOME/webapps/freezing-octo-wallhack/WEB-INF/
 
 echo "Deploy done."

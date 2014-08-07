@@ -1,4 +1,4 @@
-package com.bodejidi.laughing.wallhack;
+package com.bodejidi.freezing.octo.wallhack;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

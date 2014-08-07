@@ -1,5 +1,5 @@
 #!/bin/sh
 
-mkdir -p target/classes
+javac -classpath $CATALINA_HOME/lib/servlet-api.jar -d target/classes src/main/java/com/bodejidi/freezing/octo/wallhack/*.java
 
-javac -classpath $CATALINA_HOME/lib/servlet-api.jar -d target/classes src/main/java/com/bodejidi/laughing/wallhack/ContactServlet.java
+javac -classpath target/test-classes:lib-test/reflections-0.9.9-RC2.jar -d target/test-classes src/test/java/com/bodejidi/*.java src/test/java/com/bodejidi/unit/*.java
