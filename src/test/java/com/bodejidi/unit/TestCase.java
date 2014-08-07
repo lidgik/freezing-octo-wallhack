@@ -56,6 +56,20 @@ public class TestCase {
         }
         return testMethods;
     }
+    
+    public static void assertArrayEquals(Object[] expectedResult, Object[] actualResult) {
+        if(actualResult.length != expectedResult.length) {
+            testResult = false;
+            System.out.println("The length of two arrays not equals.");
+        } else {
+            for(int index = 0; index < expectedResult.length; index++) {
+                if(! actualResult[index].equals(expectedResult[index])) {
+                    testResult = false;
+                    System.out.println("Expected `" + (expectedResult[index] == null?"NULL":expectedResult[index]) + "`, but `" + (actualResult[index] == null?"NULL":actualResult[index]) + "`");
+                }
+            }
+        }
+    }
 
     public static void assertEquals(String expectedResult, String actualResult) {
         assertEquals(expectedResult, actualResult, expectedResult.equals(actualResult));
